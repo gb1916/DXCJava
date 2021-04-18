@@ -19,7 +19,7 @@ import java.io.Serializable;
         if (isValidNumber(number)) {
             this.number = number;
         } else {
-            //Error
+            
         }
 
         if (isValidSuit(suit)) {

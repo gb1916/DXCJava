@@ -39,6 +39,6 @@ public class BoxDemo
       room.setBox(15, 12, 6);
       
      
-      System.out.println("Volume is " + room.getVolume());
+      System.out.println("Volume of Rectangle is " + room.getVolume());
    }
 }

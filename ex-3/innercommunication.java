@@ -10,7 +10,7 @@ class ThreadInner extends Thread {
     }try {
         Thread.sleep(5);
     }catch (InterruptedException e) {
-        // TODO: handle exception
+    
         System.out.println("user Thread--" + total);
     }
 }}
@@ -19,15 +19,14 @@ public class InnerCommunication {
  
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-ThreadInner ti1 = new ThreadInner();
+    ThreadInner ti1 = new ThreadInner();
 Thread ti2 = new Thread(ti1);
 ti2.start();
 try {
     synchronized (ti1) {
         ti1.wait();
     }}catch (InterruptedException e) {
-        // TODO: handle exception
+    
         System.out.println("Main thread --" + ti1.total);
     }
         

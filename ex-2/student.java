@@ -10,9 +10,9 @@ public class student{
                 Scanner sc=new Scanner(System.in);
 		
 
-			name="unknown";
-			addr="-";
-			age=0;
+			name="Babitha";
+			addr="hyderabad";
+			age=21;
 		}
 		setinfo(string n, int ag)
 		{

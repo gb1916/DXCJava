@@ -21,8 +21,8 @@ class TransThread extends Thread
    private FTrans ft;
    TransThread (FTrans ft, String name)
    {
-      super (name); // Save thread's name
-      this.ft = ft; // Save reference to financial transaction object
+      super (name); 
+      this.ft = ft; 
    }
    public void run ()
    {
@@ -30,7 +30,7 @@ class TransThread extends Thread
       {
            if (getName ().equals ("Deposit Thread"))
            {
-               // Start of deposit thread's critical code section
+               
                ft.FTName = "Deposit";
                try
                {
@@ -41,11 +41,11 @@ class TransThread extends Thread
                }
                ft.amount = 2000.0;
                System.out.println (ft.FTName + " " + ft.amount);
-               // End of deposit thread's critical code section
+               
            }
            else
            {
-               // Start of withdrawal thread's critical code section
+               
                ft.FTName = "Withdrawal";
                try
                {
@@ -56,7 +56,7 @@ class TransThread extends Thread
                }
                ft.amount = 250.0;
                System.out.println (ft.FTName + " " + ft.amount);
-               // End of withdrawal thread's critical code section
+               
            }
       }
    }

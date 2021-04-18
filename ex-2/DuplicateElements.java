@@ -8,26 +8,24 @@ public class DuplicateElements {
     public static void main(String[] args) {
  
                 String[] strArrays = {
-                "Cabbage", 
-                "Kale",
-                "Radish",
-                "Kale",
-                "Garlic",
-                "Beetroot",
-                "Garlic",
-                "Carrot",
-                "Kale"
+                "cycle", 
+                "car",
+                "Bus",
+                "car",
+               "scooty",
+                "Bike",
+                "Scooty",
+                "Cycle",
+                "car"
         };
  
-        // First convert to List
-        List<String> list = Arrays.asList(strArrays);
+          List<String> list = Arrays.asList(strArrays);
  
-        // just empty HashSet object
-        Set<String> set = new HashSet<String>();
+         Set<String> set = new HashSet<String>();
  
-        // iterate through List
+        
         for(String str : list) {
-            // add element to Set/HashSet
+        
             boolean flagForDuplicate = set.add(str);
  
             if(!flagForDuplicate) {
