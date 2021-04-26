@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type ="text/javascript">
+function Lowest_Greatest(arr_num)
+{
+  arr_num.sort(function(x,y)
+           {
+           return x-y;
+           });
+  var n = [arr_num[0]];
+  var result = [];
+  
+  for(var j=1; j < arr_num.length; j++)
+  {
+    if(arr_num[j-1] !== arr_num[j])
+    {
+      n.push(arr_num[j]);
+    }
+  }
+    result.push(n[1],n[n.length-2]);
+  return result.join(',');
+  }
+
+document.write(Lowest_Greatest([1,2,3,4,5]));
+</script>
+</body>
+</html>
