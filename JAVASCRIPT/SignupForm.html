@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function validateform(){  
+	
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	submitOK = "true";
+	if (isNaN(username) || username=="" ||username==null||username<2||username>30) {
+		  alert("Invalid username");
+		  submitOK = "false";
+		}
+	if (password =="" || password == null) {
+		  alert("enter password" );
+		  submitOK = "false";
+		}
+	
+	if (submitOK=="false"){
+	return false;
+	}
+}
+function alert(){
+	document.write("your name is "+username);
+}
+	
+	
+	
+	</script>  
+</head>
+	<body>  
+	
+<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" method="post" >
+	Name: <input type="text" name="name"><br/>  
+	Password: <input type="password" name="password"><br/>  
+	<input type="button" value="submit" onclick="alert()">  
+	</form>  
+<body>
+
+
+</body>
+</html>

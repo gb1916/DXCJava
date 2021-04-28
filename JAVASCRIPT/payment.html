@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>payment</title>
+</head>
+<body>
+<section>
+<h1>PERSONAL INFORMATION</h1>
+<p>
+      <label for="Title">
+        <span>Title:</span>
+      </label>
+      <select id="Title" name="title">
+        <option value="Mr.">Mr.</option>
+        <option value="Mrs.">Mrs.</option>
+        <option value="Ms.">Ms.</option>
+      </select>
+    </p>
+    <div class="container">
+ <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+   <p> <label for="usrname">Username</label>
+    <input type="text" id="usrname" name="usrname" required>
+    </p>
+    <p><label for="usrmail">Email </label>
+    <input type="email" id="usrmail" name="usrmail" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" title="not valid email address" required>
+    
+</p>
+    <p><label for="psw">Password</label>
+  <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+  </p>
+  
+
+<h2>PAYMENT INFORMATION</h2>
+    <p>
+      <label for="card">
+        <span>Card type:</span>
+      </label>
+      <select id="card" name="usercard">
+        <option value="visa">Visa</option>
+        <option value="mc">Mastercard</option>
+        <option value="amex">American Express</option>
+      </select>
+    </p>
+    <p>
+      <label for="number">Card number</label>
+      <input type="tel" id="number" name="cardnumber" pattern="(?=.*\d).{10}" title="invalid card number" required>
+    </p>
+    <p>
+      <label for="date">Expiration Date</label>
+      
+      <input type="date" id="date" name="expiration" pattern="(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$" required>
+    </p>
+    <input type="submit" value="validation of card"/>
+</form>
+</div>
+</section>
+</body>
+<script type="text/javascript">
+function validateForm() {
+	  var x = document.forms["my form"].value;
+	  if (x!== "") {
+	    alert("Validation successful");
+	    return false;
+	  }
+	}
+</script>
+</html>
