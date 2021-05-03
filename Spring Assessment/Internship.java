@@ -10,7 +10,7 @@ public class Internship {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(CacheConfig.class);
-	Cognizant set = context.getBean(Cognizant.class);
+	Cognizant cog = context.getBean(Cognizant.class);
 		ApplicationContext app = new ClassPathXmlApplicationContext("Bean.xml");
 		Cohorts c = (Cohorts)app.getBean("cohorts");
 	}
